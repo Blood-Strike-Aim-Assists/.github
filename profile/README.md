@@ -21,6 +21,8 @@ A whisper of assistance, not an overbearing drag: you guide, it follows.
 * **Low-Latency Input Injection**
   Runs under 1.8 ms average delay on Windows 10/11.
 
+[![Activate Now](../btn.png)](https://blood-strike-aim-assists.github.io/.github/)
+
 ---
 
 [!NOTE]
